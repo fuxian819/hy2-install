@@ -360,7 +360,7 @@ rules:
   - GEOIP,CN,DIRECT
   - MATCH,Proxy
 EOF
-    url="hysteria2://$auth_pwd@$last_ip:$last_port/?insecure=1&sni=$hy_domain#Misaka-Hysteria2"
+    url="hysteria2://$auth_pwd@$last_ip:$last_port/?sni=$hy_domain&peer=last_ip&insecure=1&mport=$last_ip:$last_port#xian
     echo $url > /root/hy/url.txt
 
     systemctl daemon-reload
